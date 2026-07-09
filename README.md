@@ -32,18 +32,51 @@ combine*. That decision is currently manual. This project makes it repeatable, e
 The decision framework is **DERA-ZN** — Detect → Evaluate → Recommend → Act, with Zone-Normalized
 scoring — plus an always-on audit gate and an outcome-calibration learning loop.
 
-```
-/run-dera order_001
-     |
-     v
-  Detect ────────> Evaluate ─────────> Recommend ────────> Act ─────────> Audit gate
-  volume-gap        3 candidate lots     zone-normalized     bilingual       independent
-  + data audit      0%-cut pricing       decision grid       KM/EN report    invariant
-                    route/spoilage       ranks the lots      + artifact      re-check
-                    risk
-     |
-     v
-  "RECOMMENDATION — pending human approval"        (or BLOCKED / CANNOT FULFILL, honestly)
+```mermaid
+flowchart LR
+    Start(["/run-dera order_001"]) --> Detect
+
+    subgraph Detect["Detect"]
+        direction TB
+        D1["Data audit"]
+        D2["Volume-gap check"]
+    end
+
+    Detect -->|clean| Evaluate
+    Detect -->|blocker| Blocked(["BLOCKED
+renegotiate qty/price/timeline"])
+
+    subgraph Evaluate["Evaluate"]
+        direction TB
+        E1["Assemble 3 candidate lots"]
+        E2["0%-cut pricing"]
+        E3["Route / spoilage risk"]
+    end
+
+    Evaluate --> Recommend
+
+    subgraph Recommend["Recommend"]
+        direction TB
+        R1["Zone-normalized decision grid"]
+        R2["Ranks the lots"]
+    end
+
+    Recommend -->|feasible lot exists| Act
+    Recommend -->|none under buyer cap| Infeasible(["CANNOT FULFILL
+recommend renegotiate"])
+
+    subgraph Act["Act"]
+        direction TB
+        A1["Bilingual KM/EN report"]
+        A2["Machine artifact"]
+    end
+
+    Act --> Audit["Audit gate
+independent invariant re-check"]
+
+    Audit -->|passed| Approved(["RECOMMENDATION
+pending human approval"])
+    Audit -->|failed| AuditBlocked(["BLOCKED BY AUDIT"])
 ```
 
 Every stage checkpoints to `outputs/<order_id>/state.json`, so crashed or repeated runs **resume** from
