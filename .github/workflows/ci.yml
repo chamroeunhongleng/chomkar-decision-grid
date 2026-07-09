@@ -31,6 +31,19 @@ jobs:
       - name: End-to-end DERA-ZN + auditor gate (order_001)
         run: python tools/run_dera.py --order order_001 --force --now "2026-01-01T00:00:00+00:00"
 
+      - name: Execute notebooks (must run clean end-to-end)
+        run: |
+          pip install --quiet nbformat nbclient ipykernel
+          python - <<'PY'
+          import nbformat
+          from nbclient import NotebookClient
+          for name in ["01_data_cleaning.ipynb", "02_order_feasibility.ipynb",
+                       "03_pricing_profit_split.ipynb"]:
+              nb = nbformat.read(f"notebooks/{name}", as_version=4)
+              NotebookClient(nb, timeout=120, kernel_name="python3").execute(cwd="notebooks")
+              print(name, "executed OK")
+          PY
+
       - name: Assert artifact invariants (status + audit + 0% cut)
         run: |
           python - <<'PY'
