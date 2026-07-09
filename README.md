@@ -34,48 +34,19 @@ scoring — plus an always-on audit gate and an outcome-calibration learning loo
 
 ```mermaid
 flowchart LR
-    Start(["/run-dera order_001"]) --> Detect
+    Start(["/run-dera order_001"]) --> Detect["Detect<br/>data audit + volume-gap check"]
 
-    subgraph Detect["Detect"]
-        direction TB
-        D1["Data audit"]
-        D2["Volume-gap check"]
-    end
+    Detect -->|clean| Evaluate["Evaluate<br/>3 candidate lots &middot; 0%-cut pricing &middot; route/spoilage risk"]
+    Detect -->|blocker| Blocked(["BLOCKED<br/>renegotiate qty/price/timeline"])
 
-    Detect -->|clean| Evaluate
-    Detect -->|blocker| Blocked(["BLOCKED
-renegotiate qty/price/timeline"])
+    Evaluate --> Recommend["Recommend<br/>zone-normalized decision grid ranks the lots"]
 
-    subgraph Evaluate["Evaluate"]
-        direction TB
-        E1["Assemble 3 candidate lots"]
-        E2["0%-cut pricing"]
-        E3["Route / spoilage risk"]
-    end
+    Recommend -->|feasible lot exists| Act["Act<br/>bilingual KM/EN report + artifact"]
+    Recommend -->|none under buyer cap| Infeasible(["CANNOT FULFILL<br/>recommend renegotiate"])
 
-    Evaluate --> Recommend
+    Act --> Audit["Audit gate<br/>independent invariant re-check"]
 
-    subgraph Recommend["Recommend"]
-        direction TB
-        R1["Zone-normalized decision grid"]
-        R2["Ranks the lots"]
-    end
-
-    Recommend -->|feasible lot exists| Act
-    Recommend -->|none under buyer cap| Infeasible(["CANNOT FULFILL
-recommend renegotiate"])
-
-    subgraph Act["Act"]
-        direction TB
-        A1["Bilingual KM/EN report"]
-        A2["Machine artifact"]
-    end
-
-    Act --> Audit["Audit gate
-independent invariant re-check"]
-
-    Audit -->|passed| Approved(["RECOMMENDATION
-pending human approval"])
+    Audit -->|passed| Approved(["RECOMMENDATION<br/>pending human approval"])
     Audit -->|failed| AuditBlocked(["BLOCKED BY AUDIT"])
 ```
 
