@@ -29,7 +29,7 @@ Requires Python 3.10+ (the engine is stdlib-only — no third-party deps for `to
 the `py` launcher; on macOS/Linux/CI use `python`.
 
 ```bash
-git clone https://github.com/Chamroeun-Hongleng/chomkar-decision-grid.git
+git clone https://github.com/chamroeunhongleng/chomkar-decision-grid.git
 cd chomkar-decision-grid
 py -m unittest discover -s tests -v   # confirm the baseline passes before you change anything
 ```

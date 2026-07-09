@@ -3,7 +3,7 @@
 
 # Chomkar Decision Grid
 
-[![CI](https://github.com/Chamroeun-Hongleng/chomkar-decision-grid/actions/workflows/ci.yml/badge.svg)](https://github.com/Chamroeun-Hongleng/chomkar-decision-grid/actions/workflows/ci.yml)
+[![CI](https://github.com/chamroeunhongleng/chomkar-decision-grid/actions/workflows/ci.yml/badge.svg)](https://github.com/chamroeunhongleng/chomkar-decision-grid/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 
@@ -64,7 +64,7 @@ the first incomplete stage instead of recomputing.
 ### 1. Clone
 
 ```bash
-git clone https://github.com/Chamroeun-Hongleng/chomkar-decision-grid.git
+git clone https://github.com/chamroeunhongleng/chomkar-decision-grid.git
 cd chomkar-decision-grid
 ```
 
