@@ -1,6 +1,5 @@
 name: CI
 
-# Runs on GitHub once the repo is pushed (repo is not git-initialized yet — see docs).
 on:
   push:
   pull_request:
@@ -31,9 +30,19 @@ jobs:
       - name: End-to-end DERA-ZN + auditor gate (order_001)
         run: python tools/run_dera.py --order order_001 --force --now "2026-01-01T00:00:00+00:00"
 
+      - name: Cache pip (notebook execution deps)
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-nbformat-nbclient-ipykernel-v1
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install notebook execution deps
+        run: pip install --quiet nbformat nbclient ipykernel
+
       - name: Execute notebooks (must run clean end-to-end)
         run: |
-          pip install --quiet nbformat nbclient ipykernel
           python - <<'PY'
           import nbformat
           from nbclient import NotebookClient

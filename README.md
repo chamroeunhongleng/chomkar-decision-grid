@@ -4,6 +4,8 @@
 # Chomkar Decision Grid
 
 [![CI](https://github.com/Chamroeun-Hongleng/chomkar-decision-grid/actions/workflows/ci.yml/badge.svg)](https://github.com/Chamroeun-Hongleng/chomkar-decision-grid/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 
 An agricultural **decision-intelligence framework** built on [Claude Code](https://claude.com/claude-code).
 Give it a buyer order, and it decides **which smallholder farmers to combine, at what price, and by which
@@ -272,6 +274,16 @@ including the audit gate — works unchanged. Detect will tell you honestly if t
 Pre-pilot experiment. Synthetic data only; not connected to the live Chomkar platform. Currency is
 Cambodian Riel (KHR) with USD equivalents (~4,000 KHR/USD, configurable in one place). CI runs the full
 test suite, the skill lint, an audited end-to-end run, and executes all notebooks on every push.
+
+## Contributing
+
+Issues and PRs are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) for setup, conventions (the
+deterministic-core / skills-cite-never-compute rules that keep this auditable), and the local checks
+to run before opening a PR. Please also read the [Code of Conduct](CODE_OF_CONDUCT.md).
+
+## License
+
+[MIT](LICENSE) — see the LICENSE file for the full text.
 
 ## Acknowledgements
 
