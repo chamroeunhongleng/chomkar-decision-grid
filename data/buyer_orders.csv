@@ -1,0 +1,6 @@
+order_id,buyer_name,commodity,quantity_kg,quality_required,max_price_per_kg_khr,delivery_province,delivery_commune,delivery_date,perishability_days,penalty_per_day_khr
+order_001,Phnom Fresh Market,bok_choy,1500,B,3800,Kandal,Ta Khmau,2026-07-22,3,200
+order_002,Green Grocer Co,morning_glory,1200,B,2900,Kampong Cham,Kang Meas,2026-07-20,2,180
+order_003,Angkor Veggie Export,cabbage,1500,A,2400,Siem Reap,Puok,2026-07-25,5,150
+order_004,Mega Wholesale,long_bean,3000,B,3500,Kandal,Kien Svay,2026-07-28,3,220
+order_005,Budget Bazaar,cucumber,1000,B,2000,Takeo,Doun Kaev,2026-07-24,4,160

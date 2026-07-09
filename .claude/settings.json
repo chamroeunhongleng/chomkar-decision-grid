@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(py tools/*)",
+      "Bash(py scripts/*)",
+      "Bash(py -m unittest:*)",
+      "Bash(py -m pytest:*)",
+      "Bash(python tools/*)",
+      "Bash(python scripts/*)",
+      "Bash(python -m unittest:*)",
+      "Bash(python -m pytest:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

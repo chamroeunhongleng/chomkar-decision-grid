@@ -1,0 +1,41 @@
+route_id,from_zone,to_zone,distance_km,cost_per_kg_khr,road_quality,refrigerated,avg_transit_hours
+R001,Kampong Cham:Kang Meas,Kampong Cham:Kang Meas,0,50,good,true,0.5
+R002,Kampong Cham:Kang Meas,Kandal:Kien Svay,50,206,fair,false,1.6
+R003,Kampong Cham:Kang Meas,Kandal:Ta Khmau,60,231,fair,false,1.8
+R004,Kampong Cham:Kang Meas,Siem Reap:Puok,218,626,poor,true,5.4
+R005,Kampong Cham:Kang Meas,Takeo:Doun Kaev,118,374,fair,true,3.1
+R006,Kampong Cham:Prek Koy,Kampong Cham:Kang Meas,39,178,fair,false,1.4
+R007,Kampong Cham:Prek Koy,Kandal:Kien Svay,66,246,fair,false,2.0
+R008,Kampong Cham:Prek Koy,Kandal:Ta Khmau,80,280,fair,true,2.3
+R009,Kampong Cham:Prek Koy,Siem Reap:Puok,248,699,poor,true,6.0
+R010,Kampong Cham:Prek Koy,Takeo:Doun Kaev,134,414,poor,true,3.5
+R011,Takeo:Doun Kaev,Kampong Cham:Kang Meas,118,374,fair,true,3.1
+R012,Takeo:Doun Kaev,Kandal:Kien Svay,69,252,fair,false,2.0
+R013,Takeo:Doun Kaev,Kandal:Ta Khmau,57,223,fair,false,1.8
+R014,Takeo:Doun Kaev,Siem Reap:Puok,294,814,poor,true,7.0
+R015,Takeo:Doun Kaev,Takeo:Doun Kaev,0,50,good,true,0.5
+R016,Takeo:Tram Kak,Kampong Cham:Kang Meas,110,355,fair,true,2.9
+R017,Takeo:Tram Kak,Kandal:Kien Svay,64,241,fair,false,1.9
+R018,Takeo:Tram Kak,Kandal:Ta Khmau,51,207,fair,false,1.6
+R019,Takeo:Tram Kak,Siem Reap:Puok,278,775,poor,true,6.7
+R020,Takeo:Tram Kak,Takeo:Doun Kaev,16,121,good,false,0.9
+R021,Kandal:Ta Khmau,Kampong Cham:Kang Meas,60,231,fair,false,1.8
+R022,Kandal:Ta Khmau,Kandal:Kien Svay,14,116,good,false,0.8
+R023,Kandal:Ta Khmau,Kandal:Ta Khmau,0,50,good,true,0.5
+R024,Kandal:Ta Khmau,Siem Reap:Puok,253,713,poor,true,6.1
+R025,Kandal:Ta Khmau,Takeo:Doun Kaev,57,223,fair,false,1.8
+R026,Kandal:Kien Svay,Kampong Cham:Kang Meas,50,206,fair,false,1.6
+R027,Kandal:Kien Svay,Kandal:Kien Svay,0,50,good,true,0.5
+R028,Kandal:Kien Svay,Kandal:Ta Khmau,14,116,good,false,0.8
+R029,Kandal:Kien Svay,Siem Reap:Puok,253,714,poor,true,6.1
+R030,Kandal:Kien Svay,Takeo:Doun Kaev,69,252,fair,false,2.0
+R031,Siem Reap:Puok,Kampong Cham:Kang Meas,218,626,poor,true,5.4
+R032,Siem Reap:Puok,Kandal:Kien Svay,253,714,poor,true,6.1
+R033,Siem Reap:Puok,Kandal:Ta Khmau,253,713,poor,true,6.1
+R034,Siem Reap:Puok,Siem Reap:Puok,0,50,good,true,0.5
+R035,Siem Reap:Puok,Takeo:Doun Kaev,294,814,poor,true,7.0
+R036,Siem Reap:Kralanh,Kampong Cham:Kang Meas,242,686,poor,true,5.9
+R037,Siem Reap:Kralanh,Kandal:Kien Svay,276,771,poor,true,6.6
+R038,Siem Reap:Kralanh,Kandal:Ta Khmau,275,769,poor,true,6.6
+R039,Siem Reap:Kralanh,Siem Reap:Puok,25,142,good,false,1.1
+R040,Siem Reap:Kralanh,Takeo:Doun Kaev,314,865,poor,true,7.5

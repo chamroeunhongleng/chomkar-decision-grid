@@ -1,0 +1,46 @@
+name: CI
+
+# Runs on GitHub once the repo is pushed (repo is not git-initialized yet — see docs).
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate synthetic data (determinism check)
+        run: python scripts/generate_synthetic_data.py
+
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Skill & command lint
+        run: python tools/lint_skills.py
+
+      - name: Detect smoke (order_001 must be clean)
+        run: python tools/validate_data.py --order order_001
+
+      - name: End-to-end DERA-ZN + auditor gate (order_001)
+        run: python tools/run_dera.py --order order_001 --force --now "2026-01-01T00:00:00+00:00"
+
+      - name: Assert artifact invariants (status + audit + 0% cut)
+        run: |
+          python - <<'PY'
+          import json, sys
+          art = json.load(open("outputs/order_001/order_001_result.json", encoding="utf-8"))
+          assert art["status"] == "RECOMMENDATION - pending human approval", art["status"]
+          assert art["audit"]["passed"] is True, art["audit"]
+          rec = art["recommendation"]
+          payout = sum(f["ask_price_per_kg_khr"] * f["allocated_kg"] for f in rec["farmers"])
+          assert payout == rec["farmer_payout_khr"], (payout, rec["farmer_payout_khr"])
+          assert rec["blended_price_per_kg_khr"] <= rec["buyer_max_price_per_kg_khr"]
+          print("artifact invariants OK")
+          PY

@@ -1,0 +1,25 @@
+commodity,date,province,wholesale_price_per_kg_khr,retail_price_per_kg_khr,trend
+bok_choy,2026-07-15,Kampong Cham,3050,4270,up
+bok_choy,2026-07-15,Takeo,3100,4340,flat
+bok_choy,2026-07-15,Kandal,3150,4410,down
+bok_choy,2026-07-15,Siem Reap,3200,4480,up
+morning_glory,2026-07-15,Kampong Cham,2200,3080,flat
+morning_glory,2026-07-15,Takeo,2250,3150,down
+morning_glory,2026-07-15,Kandal,2300,3220,up
+morning_glory,2026-07-15,Siem Reap,2350,3290,flat
+cabbage,2026-07-15,Kampong Cham,1850,2590,down
+cabbage,2026-07-15,Takeo,1900,2660,up
+cabbage,2026-07-15,Kandal,1950,2730,flat
+cabbage,2026-07-15,Siem Reap,2000,2800,down
+cucumber,2026-07-15,Kampong Cham,2550,3570,up
+cucumber,2026-07-15,Takeo,2600,3640,flat
+cucumber,2026-07-15,Kandal,2650,3710,down
+cucumber,2026-07-15,Siem Reap,2700,3780,up
+long_bean,2026-07-15,Kampong Cham,2800,3920,flat
+long_bean,2026-07-15,Takeo,2850,3990,down
+long_bean,2026-07-15,Kandal,2900,4060,up
+long_bean,2026-07-15,Siem Reap,2950,4130,flat
+leaf_mustard,2026-07-15,Kampong Cham,2300,3220,down
+leaf_mustard,2026-07-15,Takeo,2350,3290,up
+leaf_mustard,2026-07-15,Kandal,2400,3360,flat
+leaf_mustard,2026-07-15,Siem Reap,2450,3430,down

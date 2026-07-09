@@ -1,0 +1,4 @@
+order_id,decision_date,recommended_lot,f_coverage,f_price,f_route,f_freshness,shipped,delivered_on_time,actual_spoilage_pct,buyer_satisfaction,farmer_paid_full,notes,recorded_date
+order_h001,2026-06-10,nearest_first,1.0,0.69,1.0,1.0,true,true,3,5,true,seed: nearby lot delivered fresh,2026-06-14
+order_h002,2026-06-12,cheapest_first,1.0,1.0,0.0,0.5,true,false,12,3,true,seed: cheap but far lot spoiled and was late,2026-06-16
+order_h003,2026-06-15,nearest_first,1.0,0.5,0.8,0.9,true,true,5,4,true,seed: nearby lot slightly pricier but fresh,2026-06-19

@@ -1,0 +1,27 @@
+farmer_id,name,village,commune,province,declared_crop,declared_qty_kg,expected_harvest_date,quality_grade,cold_storage,reliability_score,ask_price_per_kg_khr,lat,lon
+F001,Sok Chan,Kang Meas Village 1,Kang Meas,Kampong Cham,bok_choy,500,2026-07-16,A,true,0.92,3200,12.0000,105.1000
+F002,Chea Dara,Prek Koy Village 2,Prek Koy,Kampong Cham,bok_choy,350,2026-07-17,B,false,0.78,3000,11.9900,105.4600
+F005,Mao Sophal,Ta Khmau Village 3,Ta Khmau,Kandal,bok_choy,450,2026-07-18,A,true,0.88,3400,11.4800,104.9400
+F006,Ny Ratha,Kien Svay Village 1,Kien Svay,Kandal,bok_choy,300,2026-07-19,B,false,0.71,3100,11.5500,105.0500
+F010,Kim Sreymom,Doun Kaev Village 2,Doun Kaev,Takeo,bok_choy,400,2026-07-20,B,true,0.83,2900,10.9900,104.7800
+F014,Pich Vanna,Puok Village 3,Puok,Siem Reap,bok_choy,550,2026-07-16,A,false,0.80,3300,13.4100,103.7000
+F003,Heng Lida,Kang Meas Village 1,Kang Meas,Kampong Cham,morning_glory,400,2026-07-17,B,false,0.75,2200,12.0000,105.1000
+F007,Sam Oun,Ta Khmau Village 2,Ta Khmau,Kandal,morning_glory,300,2026-07-18,B,true,0.82,2400,11.4800,104.9400
+F011,Chan Thida,Tram Kak Village 3,Tram Kak,Takeo,morning_glory,500,2026-07-19,A,false,0.86,2300,11.1000,104.6800
+F015,Vong Sokha,Kralanh Village 1,Kralanh,Siem Reap,morning_glory,350,2026-07-20,C,false,0.64,2100,13.5200,103.5000
+F019,Ros Chanthy,Prek Koy Village 2,Prek Koy,Kampong Cham,morning_glory,450,2026-07-16,B,true,0.79,2250,11.9900,105.4600
+F004,Long Sovan,Prek Koy Village 3,Prek Koy,Kampong Cham,cabbage,600,2026-07-17,A,true,0.90,1900,11.9900,105.4600
+F008,Meas Pheak,Kien Svay Village 1,Kien Svay,Kandal,cabbage,500,2026-07-18,A,true,0.84,2000,11.5500,105.0500
+F012,Tep Nary,Doun Kaev Village 2,Doun Kaev,Takeo,cabbage,450,2026-07-19,B,false,0.73,1800,10.9900,104.7800
+F016,Sin Chenda,Puok Village 3,Puok,Siem Reap,cabbage,550,2026-07-20,A,false,0.81,1950,13.4100,103.7000
+F020,Yem Sothea,Kralanh Village 1,Kralanh,Siem Reap,cabbage,400,2026-07-16,B,false,0.68,1850,13.5200,103.5000
+F009,Khoem Rithy,Ta Khmau Village 2,Ta Khmau,Kandal,cucumber,500,2026-07-17,B,true,0.85,2600,11.4800,104.9400
+F013,Doung Piseth,Doun Kaev Village 3,Doun Kaev,Takeo,cucumber,400,2026-07-18,B,false,0.70,2500,10.9900,104.7800
+F017,Nou Soklin,Puok Village 1,Puok,Siem Reap,cucumber,450,2026-07-19,A,false,0.77,2700,13.4100,103.7000
+F021,Chhorn Bopha,Kang Meas Village 2,Kang Meas,Kampong Cham,cucumber,350,2026-07-20,B,true,0.80,2550,12.0000,105.1000
+F018,Kong Samnang,Tram Kak Village 3,Tram Kak,Takeo,long_bean,500,2026-07-16,B,false,0.74,2800,11.1000,104.6800
+F022,Seng Chanra,Kien Svay Village 1,Kien Svay,Kandal,long_bean,450,2026-07-17,B,true,0.82,2900,11.5500,105.0500
+F024,Uch Sovann,Prek Koy Village 2,Prek Koy,Kampong Cham,long_bean,400,2026-07-18,A,false,0.76,2850,11.9900,105.4600
+F023,Preab Sina,Kralanh Village 3,Kralanh,Siem Reap,leaf_mustard,300,2026-07-19,B,false,0.69,2400,13.5200,103.5000
+F025,Chhun Davy,Doun Kaev Village 1,Doun Kaev,Takeo,leaf_mustard,350,2026-07-20,C,false,0.62,2300,10.9900,104.7800
+F026,Roeun Kanha,Kang Meas Village 2,Kang Meas,Kampong Cham,leaf_mustard,400,2026-07-16,B,true,0.83,2350,12.0000,105.1000
